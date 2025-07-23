@@ -536,7 +536,7 @@ abstract class BaseAudioPlayer internal constructor(
 
         val manager = ContextCompat.getSystemService(context, AudioManager::class.java)
 
-        focus = AudioFocusRequestCompat.Builder(AUDIOFOCUS_GAIN)
+        focus = AudioFocusRequestCompat.Builder(AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
             .setOnAudioFocusChangeListener(this)
             .setAudioAttributes(
                 AudioAttributesCompat.Builder()
